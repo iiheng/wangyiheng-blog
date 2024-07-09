@@ -75,8 +75,7 @@ export default hopeTheme({
   // 加密配置
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["1234"],
-      "/posts/软件/buzz使用教程.html":["1234"]
+      "/demo/encrypt.html": ["1234"]
     },
   },
 
