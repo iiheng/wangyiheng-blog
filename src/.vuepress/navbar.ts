@@ -2,7 +2,7 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  "/demo/",
+  // "/demo/",
   // {
   //   text: "博文",
   //   icon: "pen-to-square",
@@ -56,7 +56,7 @@ export default navbar([
     text: "分类",
     icon: "categoryselected",
     children: [
-      { text: "软件", icon: "software", link: "/category/软件/" },
+      { text: "软件", icon: "pen-to-square", link: "/category/软件/" },
     ],
   },
   {

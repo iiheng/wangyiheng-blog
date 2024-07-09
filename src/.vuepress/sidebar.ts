@@ -16,6 +16,13 @@ export default sidebar({
       prefix: "posts/",
       children: "structure",
     },
+    {
+      text: "软件",
+      icon: "laptop-code",
+      prefix: "software/",
+      link: "software/",
+      children: "structure",
+    },
     "intro",
     {
       text: "幻灯片",
