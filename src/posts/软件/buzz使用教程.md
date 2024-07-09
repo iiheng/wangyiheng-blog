@@ -64,4 +64,4 @@ Buzz 提供两项主要功能：
 
 ## 获取
 
-你可以从 [GitHub](https://meta.appinn.net/t/topic/38263) 下载 Buzz。
+你可以从 [GitHub](https://github.com/chidiwilliams/buzz) 下载 Buzz。
