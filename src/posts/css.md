@@ -10,7 +10,7 @@ archive: true
 
 # CSS样式学习
 
-## 1. CSS选择器
+## 1 CSS选择器
 ### 1.1 基本选择器
 
 <details>
@@ -576,3 +576,212 @@ html body main h1 {
 - [CSS Specificity Graph Generator](https://jonassebastianohlsson.com/specificity-graph/)
 
 理解和掌握CSS选择器优先级对于创建可维护和可预测的样式表至关重要。它能帮助开发者更好地组织CSS代码，减少样式冲突，提高开发效率。
+
+## 2 CSS 伸缩盒模型 (Flexbox)
+
+Flexbox 是一种一维的布局模型,它提供了强大而灵活的方式来分配空间和对齐内容。
+
+### 基本概念
+
+- Flex 容器 (Flex Container): 设置了 `display: flex` 或 `display: inline-flex` 的元素
+- Flex 项目 (Flex Items): Flex 容器的直接子元素
+- 主轴 (Main Axis): Flex 容器的主要轴线,默认从左到右
+- 交叉轴 (Cross Axis): 垂直于主轴的轴线
+
+### Flex 容器属性
+
+#### display
+
+```css
+.container {
+  display: flex; /* 或 inline-flex */
+}
+```
+
+#### flex-direction
+
+定义主轴的方向。
+
+```css
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+```
+
+#### flex-wrap
+
+定义 Flex 项目是否换行。
+
+```css
+.container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+```
+
+#### flex-flow
+
+`flex-direction` 和 `flex-wrap` 的简写。
+
+```css
+.container {
+  /* 只设置 flex-direction */
+  flex-flow: row;
+  flex-flow: row-reverse;
+  flex-flow: column;
+  flex-flow: column-reverse;
+
+  /* 只设置 flex-wrap */
+  flex-flow: nowrap;
+  flex-flow: wrap;
+  flex-flow: wrap-reverse;
+
+  /* 同时设置 flex-direction 和 flex-wrap */
+  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  flex-flow: row wrap-reverse;
+  flex-flow: row-reverse nowrap;
+  flex-flow: row-reverse wrap;
+  flex-flow: row-reverse wrap-reverse;
+  flex-flow: column nowrap;
+  flex-flow: column wrap;
+  flex-flow: column wrap-reverse;
+  flex-flow: column-reverse nowrap;
+  flex-flow: column-reverse wrap;
+  flex-flow: column-reverse wrap-reverse;
+}
+
+```
+
+#### justify-content
+
+定义 Flex 项目在主轴上的对齐方式。
+
+```css
+.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}
+```
+
+#### align-items
+
+定义 Flex 项目在交叉轴上的对齐方式。
+
+```css
+.container {
+  align-items: stretch | flex-start | flex-end | center | baseline;
+}
+```
+
+#### align-content
+
+定义多行 Flex 项目在交叉轴上的对齐方式。
+
+```css
+.container {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+```
+
+### Flex 项目属性
+
+#### order
+
+定义 Flex 项目的排列顺序。
+
+```css
+.item {
+  order: <integer>; /* 默认为 0 */
+}
+```
+
+#### flex-grow
+
+定义 Flex 项目的增长系数。
+
+```css
+.item {
+  flex-grow: <number>; /* 默认为 0 */
+}
+```
+
+#### flex-shrink
+
+定义 Flex 项目的收缩系数。
+
+```css
+.item {
+  flex-shrink: <number>; /* 默认为 1 */
+}
+```
+
+#### flex-basis
+
+定义 Flex 项目在主轴方向上的初始大小。
+
+```css
+.item {
+  flex-basis: <length> | auto; /* 默认为 auto */
+}
+```
+
+#### flex
+
+`flex-grow`, `flex-shrink` 和 `flex-basis` 的简写。
+
+```css
+.item {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+}
+```
+
+#### align-self
+
+允许单个 Flex 项目有与其他项目不一样的对齐方式。
+
+```css
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
+
+### 常用 Flex 布局技巧
+
+1. 居中对齐：
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
+
+2. 等宽多列布局：
+```css
+.container {
+  display: flex;
+}
+.item {
+  flex: 1;
+}
+```
+
+3. 粘性页脚：
+```css
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+```
+
+4. 响应式导航栏：
+```css
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+```
