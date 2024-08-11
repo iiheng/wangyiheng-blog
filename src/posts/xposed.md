@@ -140,3 +140,12 @@ ava_vm_ext.cc:577] JNI DETECTED ERROR IN APPLICATION: non-zero capacity for null
 ```
 ### 1.3 拦截camerax
 
+
+
+
+## 2. 获取播放摄像头数据的surface
+
+## 3. 模块向宿主传递信息
+
+### 1. 通过contentprovider进行传递
+### 2. 通过

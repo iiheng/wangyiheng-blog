@@ -366,5 +366,8 @@ uniCloud.getCurrentUserInfo()
 ## CSS3样式学习
 [css视频教学](https://www.bilibili.com/video/BV1p84y1P7Z5/?spm_id_from=333.337.search-card.all.click&vd_source=d58aa7a3be7646592b8409e904eff77a)
 
+## uniapp组件：
+[uniapp组件](https://uniapp.dcloud.net.cn/component/)
+
 
 
