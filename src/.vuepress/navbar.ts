@@ -52,16 +52,16 @@ export default navbar([
   //     // "strawberry",
   //   ],
   // },
-  {
-    text: "分类",
-    icon: "categoryselected",
-    children: [
-      { text: "软件", icon: "pen-to-square", link: "/category/软件/" },
-    ],
-  },
-  {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
-  },
+  // {
+  //   text: "分类",
+  //   icon: "categoryselected",
+  //   children: [
+  //     // { text: "软件", icon: "pen-to-square", link: "/category/软件/" },
+  //   ],
+  // },
+  // {
+  //   text: "V2 文档",
+  //   icon: "book",
+  //   link: "https://theme-hope.vuejs.press/zh/",
+  // },
 ]);

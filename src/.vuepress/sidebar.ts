@@ -4,30 +4,30 @@ export default sidebar({
   "/": [
     "",
     {
-      text: "如何使用",
-      icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
-      children: "structure",
-    },
-    {
-      text: "文章",
+      text: "文章（已归档）",
       icon: "book",
-      prefix: "posts/",
+      prefix: "archived-manual/",
       children: "structure",
     },
     {
-      text: "软件",
-      icon: "laptop-code",
-      prefix: "software/",
-      link: "software/",
+      text: "文章（AI编辑）",
+      icon: "book",
+      prefix: "archived-ai/",
       children: "structure",
     },
-    "intro",
-    {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
-    },
+
+    // {
+    //   text: "文章（未归档）",
+    //   icon: "book",
+    //   prefix: "unarchived/",
+    //   children: "structure",
+    // },
+   
+    // "intro",
+    // {
+    //   text: "幻灯片",
+    //   icon: "person-chalkboard",
+    //   link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
+    // },
   ],
 });
